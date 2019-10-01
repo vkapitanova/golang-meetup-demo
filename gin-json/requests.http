@@ -1,0 +1,13 @@
+### Get item
+GET localhost:8080/item
+
+### Create item
+POST localhost:8080/items
+Content-Type: application/json
+
+{
+  "name": "Valentina",
+  "email": "valentina.kapitanova@zalando.fi"
+}
+
+###

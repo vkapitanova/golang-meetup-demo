@@ -1,0 +1,17 @@
+### Create item and parse id from location
+POST localhost:8080/items
+Content-Type: application/json
+
+{
+  "name": "Valentina",
+  "email": "valentina.kapitanova@zalando.fi"
+}
+
+> {%
+client.global.set("id", response.headers.valuesOf("Location")[0].split("/")[2])
+%}
+
+### Get item by id
+GET localhost:8080/items/{{id}}
+
+###
